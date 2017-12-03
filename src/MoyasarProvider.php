@@ -36,7 +36,7 @@ class MoyasarProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app['Moyasar'] = $this->app->share(function($app){
+        $this->app->singleton('Moyasar',function($app){
             return new MoyasarFaced;
         });
     }
